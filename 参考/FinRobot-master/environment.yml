@@ -12,7 +12,7 @@ dependencies:
   - starlette=0.37.2
   - tenacity=8.3.0
   - tqdm=4.66.1
-  - typing-extensions=4.12.0
+  - typing-extensions=4.9.0
   - aiohttp=3.8.5
   - matplotlib
   - nltk=3.8.1
@@ -42,3 +42,4 @@ dependencies:
     - openai
     - python-magic
     - python-magic-bin
+    - ipykernel

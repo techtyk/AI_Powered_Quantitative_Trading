@@ -32,3 +32,14 @@ print("workflow模块导入成功")
 
 
 
+llm_config = {
+    "config_list": autogen.config_list_from_json(
+        "../OAI_CONFIG_LIST",
+        filter_dict={
+            "model": ["gpt-4o-mini"],
+        },
+    ),
+    "timeout": 120,
+    "temperature": 0.5,
+}
+register_keys_from_json("../config_api_keys")

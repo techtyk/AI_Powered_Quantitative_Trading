@@ -29,7 +29,7 @@ def get_current_date():
 
 
 def register_keys_from_json(file_path):
-    with open(file_path, "r") as f:
+    with open(file_path, "r", encoding="utf-8") as f:
         keys = json.load(f)
     for key, value in keys.items():
         os.environ[key] = value
