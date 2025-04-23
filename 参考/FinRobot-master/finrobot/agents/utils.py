@@ -10,7 +10,9 @@ def instruction_trigger(sender):
 def instruction_message(recipient, messages, sender, config):
     # Extract the path to the instruction text file from the last message
     full_order = recipient.chat_messages_for_summary(sender)[-1]["content"]
+    print(f"full_order: {full_order}")
     txt_path = full_order.replace("instruction & resources saved to ", "").strip()
+    print(f"txt_path: {txt_path}")
     with open(txt_path, "r") as f:
         instruction = f.read() + "\n\nReply TERMINATE at the end of your response."
     return instruction
