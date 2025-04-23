@@ -1,0 +1,16 @@
+-e .
+pyautogen[retrievechat]>=0.2.19
+finnhub-python
+backtrader
+langchain==0.1.20
+marker-pdf
+mplfinance
+pdfkit==1.0.0
+praw
+pyPDF2
+ratelimit==2.2.1
+reportlab
+sec-api
+tushare
+unstructured==0.8.1
+yfinance

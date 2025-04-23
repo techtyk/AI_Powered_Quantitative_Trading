@@ -20,7 +20,7 @@ from .prompts import leader_system_message, role_system_message
 
 
 class FinRobot(AssistantAgent):
-
+    from .agent_library import library
     def __init__(
         self,
         agent_config: str | Dict[str, Any],
@@ -33,7 +33,6 @@ class FinRobot(AssistantAgent):
         if isinstance(agent_config, str):
             orig_name = agent_config
             name = orig_name.replace("_Shadow", "")
-            from .agent_library import library
             assert name in library, f"FinRobot {name} not found in agent library."
             agent_config = library[name]
 
